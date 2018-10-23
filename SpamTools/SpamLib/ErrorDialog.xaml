@@ -1,0 +1,18 @@
+﻿<Window x:Class="MailSenderGUI.ErrorDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MailSenderGUI"
+        mc:Ignorable="d"
+        Title="ERROR" Height="220" Width="400" ResizeMode="NoResize">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <TextBlock x:Name="txtError" TextWrapping="Wrap" Text="TextBlock" FontSize="14" Foreground="Red"/>
+        <Button x:Name="btnOK" Content="OK" HorizontalAlignment="Center" VerticalAlignment="Center" Width="75" FontSize="14" Grid.Row="1" Click="btnOK_Click"/>
+
+    </Grid>
+</Window>
