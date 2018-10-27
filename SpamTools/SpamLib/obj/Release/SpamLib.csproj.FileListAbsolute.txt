@@ -1,0 +1,7 @@
+C:\Users\111\Code\MailSender\SpamTools\SpamLib\bin\Release\SpamLib.dll.config
+C:\Users\111\Code\MailSender\SpamTools\SpamLib\bin\Release\SpamLib.dll
+C:\Users\111\Code\MailSender\SpamTools\SpamLib\bin\Release\SpamLib.pdb
+C:\Users\111\Code\MailSender\SpamTools\SpamLib\obj\Release\SpamLib.csprojAssemblyReference.cache
+C:\Users\111\Code\MailSender\SpamTools\SpamLib\obj\Release\SpamLib.csproj.CoreCompileInputs.cache
+C:\Users\111\Code\MailSender\SpamTools\SpamLib\obj\Release\SpamLib.dll
+C:\Users\111\Code\MailSender\SpamTools\SpamLib\obj\Release\SpamLib.pdb

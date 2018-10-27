@@ -1,18 +1,13 @@
-﻿namespace SpamLib
+﻿using System.Linq;
+
+namespace SpamLib
 {
     /// <summary>База данных</summary>
-    public static class DataBase
+    /// <summary>База данных</summary>
+    public class DataBase
     {
-        // Пока только может отправлять с яндекса. 
+        private readonly RecipientsDataContext _Recipients = new RecipientsDataContext();
 
-        /// <summary>
-        /// Хост
-        /// </summary>
-        public static string Host { get; set; } = "smtp.yandex.ru";
-
-        /// <summary>
-        /// Порт
-        /// </summary>
-        public static int Port { get; set; } = 25;
+        public IQueryable<Recipient> Recipients => _Recipients.Recipient;
     }
 }

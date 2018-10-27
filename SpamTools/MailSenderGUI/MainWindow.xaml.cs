@@ -21,43 +21,31 @@ namespace MailSenderGUI
     /// </summary>
     public partial class MainWindow : Window
     {
-        /// <summary>
-        /// Конструктор. В нем подписываемся на события созданные в MailService.
-        /// </summary>
         public MainWindow()
         {
             InitializeComponent();
-            MailService.Error += ShowError;
-            MailService.Complete += CompleteShow;
         }
 
-        /// <summary>
-        /// Показ формы, если все закончилось удачно.
-        /// </summary>
-        private void CompleteShow()
+        private void OnExitClick(object Sender, RoutedEventArgs E)
         {
-            SendCompleteDialog scd = new SendCompleteDialog();
-            scd.ShowDialog();
+            Close();
         }
 
-        /// <summary>
-        /// Показ формы, если произошла ошибка.
-        /// </summary>
-        /// <param name="message">Сообщение об ошибке</param>
-        private void ShowError(string message)
+        private void GoToPlannerButton_OnClick(object Sender, RoutedEventArgs E)
         {
-            ErrorDialog ed = new ErrorDialog(message);
-            ed.ShowDialog();
+            MainTabControl.SelectedItem = TimePlannerTab;
         }
 
-        /// <summary>
-        /// Создаем экземпляр MailService
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void btnOK_Click(object sender, RoutedEventArgs e)
+        private void OnNextPressed(object Sender, EventArgs E)
         {
-            MailService ms = new MailService(txtLogin.Text, passBoxPassword.SecurePassword, txtSubject.Text, txtMailText.Text );
+            if (MainTabControl.SelectedIndex < MainTabControl.Items.Count - 1)
+                MainTabControl.SelectedIndex++;
+        }
+
+        private void OnPrevPressed(object Sender, EventArgs E)
+        {
+            if (MainTabControl.SelectedIndex > 0)
+                MainTabControl.SelectedIndex--;
         }
     }
 }
